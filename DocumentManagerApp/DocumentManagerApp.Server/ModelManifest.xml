@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\ChangeRequests.lsml" Checksum="F5DCDB16D3E93671CAF5098210FADD80C764623331321D9063987AFFA3B7AC47" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\ChangeRequestStatuses.lsml" Checksum="E250A0972C96BEC75D8FCAAAD20F349AD78E310D058364CBD6B8F776B30FBBE4" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\Documents.lsml" Checksum="D7FCA054E27CEAF3C6546970D7A25C25FD92F78489BDE5BA424DFBEDA7494700" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\MyOwnedDocuments.lsml" Checksum="5193EAECCE67AB924E1B7F7EB4D79779A913B0916B1896AC3D772D082BE14757" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\DocumentTypes.lsml" Checksum="D4E5C22B6D01E1DB67F1BCCE101AAB86C3A59B2AB9B9C561C62C694D36F9B877" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\DocumentVersionApprovals.lsml" Checksum="4DD09925A1A6AE445A187946B584A2B86417D2B37253688EF40D8D257232C248" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\MyDocumentVersionApprovals.lsml" Checksum="E57BE78DC8CEB5074CA70AB89C5C254639F99E7AF767EAC14A48B429523B362F" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\DocumentVersionHolders.lsml" Checksum="3D542BF7A5BDD10DA65778F0EA15155602E0B4ED6DB53C1FE31B55418ACA9C19" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\MyHeldDocumentVersions.lsml" Checksum="CEBD863653A704FAA98A81BC1DFBA9A8852C43912229E4C5F0EF53C181837090" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\DocumentVersionReviews.lsml" Checksum="3E3AA91CF3CEB4B31B1B5850BBF20C5F7D264DDD04C6E06881F90336EF7C15F4" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\MyDocumentReviews.lsml" Checksum="021F4DA8C7958110B4B659EA216F0C918381B8F68AFFFC99B5940A2551BB0B4E" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\DocumentVersions.lsml" Checksum="9DB40A85F7A19350D11ED9A2D2BBB6359E20702A94C6CFCC1412EB152011DFC7" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\MyAuthoredDocumentVersions.lsml" Checksum="FE9C821C022FC64909E1D4353EAF5F46F2B959E675144CC3EDE8F4387B58967C" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\DataSources\ApplicationData\Employees.lsml" Checksum="405A46A911E11743DEE646C19EC7491C51AA2E94002B80BF7DE8B7946BFD1A21" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\Properties\DataSources\ApplicationData.lsml" Checksum="4269B7A1C607D3AEA1D34BA816EE24BE223A014F83A97F863157835AA09C6154" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.Server\Properties\Service.lsml" Checksum="01BBB56877C6D1CFA4BFC730718B5E847F201D58BF89FB9DAEFE4E1E56855276" />
+  </Documents>
+</ModelDocumentManifest>

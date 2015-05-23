@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ApplicationDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ApplicationDataStore">
+    <EntitySet Name="ChangeRequests" EntityType="ApplicationDataStore.ChangeRequest" store:Type="Tables" Schema="dbo" Table="ChangeRequests" />
+    <EntitySet Name="ChangeRequestStatuses" EntityType="ApplicationDataStore.ChangeRequestStatus" store:Type="Tables" Schema="dbo" Table="ChangeRequestStatuses" />
+    <EntitySet Name="Documents" EntityType="ApplicationDataStore.Document" store:Type="Tables" Schema="dbo" Table="Documents" />
+    <EntitySet Name="DocumentTypes" EntityType="ApplicationDataStore.DocumentType" store:Type="Tables" Schema="dbo" Table="DocumentTypes" />
+    <EntitySet Name="DocumentVersionApprovals" EntityType="ApplicationDataStore.DocumentVersionApproval" store:Type="Tables" Schema="dbo" Table="DocumentVersionApprovals" />
+    <EntitySet Name="DocumentVersionHolders" EntityType="ApplicationDataStore.DocumentVersionHolder" store:Type="Tables" Schema="dbo" Table="DocumentVersionHolders" />
+    <EntitySet Name="DocumentVersionReviews" EntityType="ApplicationDataStore.DocumentVersionReview" store:Type="Tables" Schema="dbo" Table="DocumentVersionReviews" />
+    <EntitySet Name="DocumentVersions" EntityType="ApplicationDataStore.DocumentVersion" store:Type="Tables" Schema="dbo" Table="DocumentVersions" />
+    <EntitySet Name="Employees" EntityType="ApplicationDataStore.Employee" store:Type="Tables" Schema="dbo" Table="Employees" />
+    <AssociationSet Name="ChangeRequestStatus_ChangeRequest" Association="ApplicationDataStore.ChangeRequestStatus_ChangeRequest">
+      <End Role="ChangeRequestStatus" EntitySet="ChangeRequestStatuses" />
+      <End Role="ChangeRequest" EntitySet="ChangeRequests" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentVersion_Document" Association="ApplicationDataStore.DocumentVersion_Document">
+      <End Role="Document" EntitySet="Documents" />
+      <End Role="DocumentVersion" EntitySet="DocumentVersions" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentType_Document" Association="ApplicationDataStore.DocumentType_Document">
+      <End Role="DocumentType" EntitySet="DocumentTypes" />
+      <End Role="Document" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentVersionReview_DocumentVersionHolder" Association="ApplicationDataStore.DocumentVersionReview_DocumentVersionHolder">
+      <End Role="DocumentVersionHolder" EntitySet="DocumentVersionHolders" />
+      <End Role="DocumentVersionReview" EntitySet="DocumentVersionReviews" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentVersionHolder_DocumentVersion" Association="ApplicationDataStore.DocumentVersionHolder_DocumentVersion">
+      <End Role="DocumentVersion" EntitySet="DocumentVersions" />
+      <End Role="DocumentVersionHolder" EntitySet="DocumentVersionHolders" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentVersionApproval_DocumentVersion" Association="ApplicationDataStore.DocumentVersionApproval_DocumentVersion">
+      <End Role="DocumentVersion" EntitySet="DocumentVersions" />
+      <End Role="DocumentVersionApproval" EntitySet="DocumentVersionApprovals" />
+    </AssociationSet>
+    <AssociationSet Name="ChangeRequest_DocumentVersion" Association="ApplicationDataStore.ChangeRequest_DocumentVersion">
+      <End Role="DocumentVersion" EntitySet="DocumentVersions" />
+      <End Role="ChangeRequest" EntitySet="ChangeRequests" />
+    </AssociationSet>
+    <AssociationSet Name="Document_Employee" Association="ApplicationDataStore.Document_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Document" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentVersion_Employee" Association="ApplicationDataStore.DocumentVersion_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="DocumentVersion" EntitySet="DocumentVersions" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentVersionHolder_Employee" Association="ApplicationDataStore.DocumentVersionHolder_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="DocumentVersionHolder" EntitySet="DocumentVersionHolders" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentVersionApproval_Employee" Association="ApplicationDataStore.DocumentVersionApproval_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="DocumentVersionApproval" EntitySet="DocumentVersionApprovals" />
+    </AssociationSet>
+    <AssociationSet Name="ChangeRequest_Employee" Association="ApplicationDataStore.ChangeRequest_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="ChangeRequest" EntitySet="ChangeRequests" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ChangeRequest">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Reference" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ChangeRequestTitle" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ChangeRequestDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateRaised" Type="datetime" Nullable="false" />
+    <Property Name="TargetClosureDate" Type="datetime" Nullable="false" />
+    <Property Name="DateClosed" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="ChangeRequestStatus_ChangeRequest" Type="int" Nullable="false" />
+    <Property Name="ChangeRequest_DocumentVersion" Type="int" />
+    <Property Name="ChangeRequest_Employee" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChangeRequestStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Document">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentTitle" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Reference" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="InUse" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentType_Document" Type="int" Nullable="false" />
+    <Property Name="Document_Employee" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentTypeCode" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="DocumentTypeDescription" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="DocumentVersionApproval">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ApprovalStatus" Type="nvarchar" MaxLength="255" />
+    <Property Name="ApprovalStatusDate" Type="datetime" />
+    <Property Name="ApproverComments" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentVersionApproval_DocumentVersion" Type="int" Nullable="false" />
+    <Property Name="DocumentVersionApproval_Employee" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentVersionHolder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DateDistributedTo" Type="datetime" />
+    <Property Name="DateAcknowledged" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentVersionHolder_DocumentVersion" Type="int" Nullable="false" />
+    <Property Name="DocumentVersionHolder_Employee" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentVersionReview">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DateDue" Type="datetime" Nullable="false" />
+    <Property Name="DateCompleted" Type="datetime" />
+    <Property Name="Outcome" Type="nvarchar" MaxLength="250" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentVersionReview_DocumentVersionHolder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentVersion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MajorVersionNumber" Type="int" Nullable="false" />
+    <Property Name="MinorVersionNumber" Type="int" Nullable="false" />
+    <Property Name="Changes" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EffectiveDate" Type="datetime" Nullable="false" />
+    <Property Name="DocumentStatus" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="DocumentName" Type="nvarchar" MaxLength="255" />
+    <Property Name="StoredDocument" Type="varbinary(max)" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentVersion_Document" Type="int" Nullable="false" />
+    <Property Name="DocumentVersion_Employee" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="75" />
+    <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="75" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="75">
+      <UniqueIndexAnnotation xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </Property>
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Current" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <Association Name="ChangeRequestStatus_ChangeRequest">
+    <End Role="ChangeRequestStatus" Type="ApplicationDataStore.ChangeRequestStatus" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="ChangeRequest" Type="ApplicationDataStore.ChangeRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChangeRequestStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChangeRequest">
+        <PropertyRef Name="ChangeRequestStatus_ChangeRequest" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DocumentVersion_Document">
+    <End Role="Document" Type="ApplicationDataStore.Document" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="DocumentVersion" Type="ApplicationDataStore.DocumentVersion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentVersion">
+        <PropertyRef Name="DocumentVersion_Document" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DocumentType_Document">
+    <End Role="DocumentType" Type="ApplicationDataStore.DocumentType" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Document" Type="ApplicationDataStore.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="DocumentType_Document" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DocumentVersionReview_DocumentVersionHolder">
+    <End Role="DocumentVersionHolder" Type="ApplicationDataStore.DocumentVersionHolder" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="DocumentVersionReview" Type="ApplicationDataStore.DocumentVersionReview" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentVersionHolder">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentVersionReview">
+        <PropertyRef Name="DocumentVersionReview_DocumentVersionHolder" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DocumentVersionHolder_DocumentVersion">
+    <End Role="DocumentVersion" Type="ApplicationDataStore.DocumentVersion" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="DocumentVersionHolder" Type="ApplicationDataStore.DocumentVersionHolder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentVersion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentVersionHolder">
+        <PropertyRef Name="DocumentVersionHolder_DocumentVersion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DocumentVersionApproval_DocumentVersion">
+    <End Role="DocumentVersion" Type="ApplicationDataStore.DocumentVersion" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DocumentVersionApproval" Type="ApplicationDataStore.DocumentVersionApproval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentVersion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentVersionApproval">
+        <PropertyRef Name="DocumentVersionApproval_DocumentVersion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChangeRequest_DocumentVersion">
+    <End Role="DocumentVersion" Type="ApplicationDataStore.DocumentVersion" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ChangeRequest" Type="ApplicationDataStore.ChangeRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentVersion">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChangeRequest">
+        <PropertyRef Name="ChangeRequest_DocumentVersion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Document_Employee">
+    <End Role="Employee" Type="ApplicationDataStore.Employee" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Document" Type="ApplicationDataStore.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="Document_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DocumentVersion_Employee">
+    <End Role="Employee" Type="ApplicationDataStore.Employee" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="DocumentVersion" Type="ApplicationDataStore.DocumentVersion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentVersion">
+        <PropertyRef Name="DocumentVersion_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DocumentVersionHolder_Employee">
+    <End Role="Employee" Type="ApplicationDataStore.Employee" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="DocumentVersionHolder" Type="ApplicationDataStore.DocumentVersionHolder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentVersionHolder">
+        <PropertyRef Name="DocumentVersionHolder_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DocumentVersionApproval_Employee">
+    <End Role="Employee" Type="ApplicationDataStore.Employee" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="DocumentVersionApproval" Type="ApplicationDataStore.DocumentVersionApproval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DocumentVersionApproval">
+        <PropertyRef Name="DocumentVersionApproval_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChangeRequest_Employee">
+    <End Role="Employee" Type="ApplicationDataStore.Employee" Multiplicity="1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="ChangeRequest" Type="ApplicationDataStore.ChangeRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChangeRequest">
+        <PropertyRef Name="ChangeRequest_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(Configuration)' != 'Release' ">
+    <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{c12d6af4-2e25-4afa-b44f-a9ac66107e33}</ProjectGuid>
+    <LightSwitchVersion>v4.0</LightSwitchVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\MobileClient\Microsoft.LightSwitch.MobileClient.Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\MobileClient\Microsoft.LightSwitch.MobileClient.props" />
+  <PropertyGroup>
+    <!--TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion-->
+    <LightSwitchProjectTypeV3>Client</LightSwitchProjectTypeV3>
+    <LightSwitchProjectSubType>JScript</LightSwitchProjectSubType>
+    <ProjectTypeGuids>{DA98106F-DEFA-4A62-8804-0BD2F166A45D};{262852c6-cd72-467d-83fe-5eeb1973a190}</ProjectTypeGuids>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <SupportedCultures>en-US</SupportedCultures>
+    <DefaultPlatform>AnyCPU</DefaultPlatform>
+    <ClientProjectName>HTMLClient</ClientProjectName>
+    <ServerProjectReference>..\DocumentManagerApp.Server\DocumentManagerApp.Server.csproj</ServerProjectReference>
+    <LightSwitchDisplayName>HTMLClient</LightSwitchDisplayName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content\dark-theme-2.0.0.css" />
+    <Content Include="Content\Images\ajax-loader.gif" />
+    <Content Include="Content\Images\AuthoredDocuments.png" />
+    <Content Include="Content\Images\Approvals.png" />
+    <Content Include="Content\Images\MobileApprovals.png" />
+    <Content Include="Content\Images\MobileAuthoredDocuments.png" />
+    <Content Include="Content\Images\MobileOwnedDocuments.png" />
+    <Content Include="Content\Images\MobileReview.png" />
+    <Content Include="Content\Images\Review.png" />
+    <Content Include="Content\Images\OwnedDocuments.png" />
+    <Content Include="Content\Images\Employees.png" />
+    <Content Include="Content\Images\MobileDocuments.png" />
+    <Content Include="Content\Images\MobileMyDocuments.png" />
+    <Content Include="Content\Images\MobileRequestStatuses.png" />
+    <Content Include="Content\Images\MyDocuments.png" />
+    <Content Include="Content\Images\RequestStatuses.png" />
+    <Content Include="Content\Images\icons-18-black.png" />
+    <Content Include="Content\Images\icons-18-white.png" />
+    <Content Include="Content\Images\icons-36-black.png" />
+    <Content Include="Content\Images\icons-36-white.png" />
+    <Content Include="Content\Images\MobileEmployees.png" />
+    <Content Include="Content\Images\MobileSettings.png" />
+    <Content Include="Content\Images\msls-black-icons-18.png" />
+    <Content Include="Content\Images\msls-black-icons-36.png" />
+    <Content Include="Content\Images\msls-loader-dark.gif" />
+    <Content Include="Content\Images\msls-loader-light.gif" />
+    <Content Include="Content\Images\msls-white-icons-18.png" />
+    <Content Include="Content\Images\msls-white-icons-36.png" />
+    <Content Include="Content\Images\msls-blue-icons-36.png" />
+    <Content Include="Content\Images\Settings.png" />
+    <Content Include="Content\Images\Documents.png" />
+    <Content Include="Content\jquery.mobile-1.3.0.css" />
+    <Content Include="Content\jquery.mobile-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.min.css" />
+    <Content Include="Content\light-theme-2.0.0.css" />
+    <Content Include="Content\msls-2.0.0.css" />
+    <Content Include="Content\msls-2.0.0.min.css" />
+    <Content Include="Content\msls-dark-2.0.0.css" />
+    <Content Include="Content\msls-light-2.0.0.css" />
+    <Content Include="default.htm" />
+    <Content Include="Content\user-customization.css" />
+    <Content Include="Content\Images\user-logo.png" />
+    <Content Include="Content\Images\user-splash-screen.png" />
+    <Content Include="Content\Web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Screens\AddEditChangeRequest.lsml.js">
+      <DependentUpon>AddEditChangeRequest.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditChangeRequestStatus.lsml.js">
+      <DependentUpon>AddEditChangeRequestStatus.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditDocument.lsml.js">
+      <DependentUpon>AddEditDocument.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditDocumentType.lsml.js">
+      <DependentUpon>AddEditDocumentType.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditDocumentVersion.lsml.js">
+      <DependentUpon>AddEditDocumentVersion.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditDocumentVersionApproval.lsml.js">
+      <DependentUpon>AddEditDocumentVersionApproval.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditDocumentVersionHolder.lsml.js">
+      <DependentUpon>AddEditDocumentVersionHolder.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditDocumentVersionReview.lsml.js">
+      <DependentUpon>AddEditDocumentVersionReview.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\AddEditEmployee.lsml.js">
+      <DependentUpon>AddEditEmployee.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseChangeRequestStatuses.lsml.js">
+      <DependentUpon>BrowseChangeRequestStatuses.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseDocuments.lsml.js">
+      <DependentUpon>BrowseDocuments.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseDocumentTypes.lsml.js">
+      <DependentUpon>BrowseDocumentTypes.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseEmployees.lsml.js">
+      <DependentUpon>BrowseEmployees.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home.lsml.js">
+      <DependentUpon>Home.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\MobileHome.lsml.js">
+      <DependentUpon>MobileHome.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\MobileSettings.lsml.js">
+      <DependentUpon>MobileSettings.lsml</DependentUpon>
+    </Content>
+    <Content Include="Scripts\datajs-1.1.1.js" />
+    <Content Include="Scripts\datajs-1.1.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0-vsdoc.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0.min.js" />
+    <Content Include="Scripts\msls.js" />
+    <Content Include="Scripts\msls-2.0.0-vsdoc.js" />
+    <Content Include="Scripts\msls-2.0.0.js" />
+    <Content Include="Scripts\msls-2.0.0.min.js" />
+    <Content Include="Scripts\winjs-1.0.js" />
+    <Content Include="Scripts\winjs-1.0.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ServiceMetadataReference Include="..\DocumentManagerApp.Server\DocumentManagerApp.Server.csproj">
+      <Visible>false</Visible>
+    </ServiceMetadataReference>
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchModel Include="Properties\Client.lsml">
+      <ProjectCritical>true</ProjectCritical>
+    </LightSwitchModel>
+    <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\AddEditChangeRequest.lsml" />
+    <LightSwitchModel Include="Screens\AddEditChangeRequestStatus.lsml" />
+    <LightSwitchModel Include="Screens\AddEditDocument.lsml" />
+    <LightSwitchModel Include="Screens\AddEditDocumentType.lsml" />
+    <LightSwitchModel Include="Screens\AddEditDocumentVersion.lsml" />
+    <LightSwitchModel Include="Screens\AddEditDocumentVersionApproval.lsml" />
+    <LightSwitchModel Include="Screens\AddEditDocumentVersionHolder.lsml" />
+    <LightSwitchModel Include="Screens\AddEditDocumentVersionReview.lsml" />
+    <LightSwitchModel Include="Screens\AddEditEmployee.lsml" />
+    <LightSwitchModel Include="Screens\BrowseChangeRequestStatuses.lsml" />
+    <LightSwitchModel Include="Screens\BrowseDocuments.lsml" />
+    <LightSwitchModel Include="Screens\BrowseDocumentsByDocumentTypes.lsml" />
+    <LightSwitchModel Include="Screens\BrowseDocumentTypes.lsml" />
+    <LightSwitchModel Include="Screens\BrowseEmployees.lsml" />
+    <LightSwitchModel Include="Screens\BrowseMyAuthoredDocumentVersions.lsml" />
+    <LightSwitchModel Include="Screens\BrowseMyDocumentReviews.lsml" />
+    <LightSwitchModel Include="Screens\BrowseMyDocumentVersionApprovals.lsml" />
+    <LightSwitchModel Include="Screens\BrowseMyHeldDocumentVersions.lsml" />
+    <LightSwitchModel Include="Screens\BrowseMyOwnedDocuments.lsml" />
+    <LightSwitchModel Include="Screens\Home.lsml" />
+    <LightSwitchModel Include="Screens\MobileHome.lsml" />
+    <LightSwitchModel Include="Screens\MobileSettings.lsml" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ClientBuildFile Include="GeneratedArtifacts\model.json">
+      <SubFolder>Content\Resources\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\data.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\viewModel.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\usercode.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\resources.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\Microsoft.LightSwitch.Build.Tasks.targets" />
+  <!-- Redefine the targets to be empty -->
+  <Target Name="GetXapOutputFile" />
+  <PropertyGroup>
+    <AppxPackage>false</AppxPackage>
+    <AppxGeneratePriEnabled>false</AppxGeneratePriEnabled>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

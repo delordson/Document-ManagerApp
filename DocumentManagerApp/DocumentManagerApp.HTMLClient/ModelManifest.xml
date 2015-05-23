@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Properties\Client.lsml" Checksum="0088F2ED950158C857B2E1EA9F67C40F762A25269A0A0AABA3C876F51DB6A2C6" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Properties\Proxies.lsml" Checksum="B731FA9939620DAF0F146CA975E6AF7540C5687A72D42D073314B909CD52874B" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\AddEditChangeRequest.lsml" Checksum="DD93151638AA2170DA64D54692AFB3B8D8E9C11385D79C9C8FCE86EC668AF51C" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\AddEditChangeRequestStatus.lsml" Checksum="B77914B0A9FF252CE80F6F4FF02945DF8FE3F4A13E7998F8D17A19AEF3EDF542" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\AddEditDocument.lsml" Checksum="012E9131A5C9B848D11FA978C7669DE6703CB277B9893133CF441379A289991C" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\AddEditDocumentType.lsml" Checksum="7898AE29D99DDDE08FBC486A920740FF90B3A79C6D6587215885AD1DB198DD69" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\AddEditDocumentVersion.lsml" Checksum="92E38AA67349C44F5DC935DCECD1A2466377BE36ED3FA55E3200947060F27052" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\AddEditDocumentVersionApproval.lsml" Checksum="A6BEF8A63D04F3EACC52666FD6D51B2A938B800F8CFF86C11F54D6B8C7CDA4A5" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\AddEditDocumentVersionHolder.lsml" Checksum="4414D13C74B05D0D7DE165C5FE6A4A44490288B1F4CA18AF50B1A1CDFA1B0464" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\AddEditDocumentVersionReview.lsml" Checksum="ACA5BD9BF4E21D6372B414EB0EE11E234AE60014B9EB34E62474A5342D03E556" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\AddEditEmployee.lsml" Checksum="59B01E091D950F09107DFA9D387BFA6E5EBDBB16EB0473D85D40E96C08ED97AF" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\AddStoredDocument.lsml" Checksum="BB2681F7C1B364AF042FB489B2563E2A4658E083E712EE7A3D238E4B0F0B72C8" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\BrowseChangeRequestStatuses.lsml" Checksum="ADB3503C5528340BDF035C63AD6F833F657E9D4E84EA1C6F95FFC623CB76D7CB" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\BrowseDocuments.lsml" Checksum="A6552795321C7F526E316C41802ABA1591459C1C68B3F294A1783534B9B08E1E" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\BrowseDocumentsByDocumentTypes.lsml" Checksum="1B17600817A43A6EDFCC22AC4165BEB2A9C96BAFCF3A92B7C49A4681605F3EEC" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\BrowseDocumentTypes.lsml" Checksum="71DD2E41CF4E7059974FC144B2F04CF378C4368418538BCDE5E0746FBA67ABF0" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\BrowseEmployees.lsml" Checksum="0B0416F6D6CC617A57D643BC88CE07D14336F66A4B9347238C9511EC20CDB9CB" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\BrowseMyAuthoredDocumentVersions.lsml" Checksum="246E67AA3120CAC677F05F8B1847A8FA8CF46E7ED59457C553B73564FAB7B767" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\BrowseMyDocumentReviews.lsml" Checksum="1248383D63866FA9DC2C99952B5C189B9D9CE739418E5D5B27D1174131D6FC51" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\BrowseMyDocumentVersionApprovals.lsml" Checksum="F9A13DC7188281BA84AEC52A6D11F64406F57E3FBF5801492D21701786776358" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\BrowseMyHeldDocumentVersions.lsml" Checksum="69B3A343F4E0C6CD8AA5FE40FDE10C1A6F273F929C3DE4104973CA58C6C4C2DE" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\BrowseMyOwnedDocuments.lsml" Checksum="63FD1CBBF2F16B4463D673AD9CDC699EE0F33D191E604C28C90D90F7131DD9FF" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\Home.lsml" Checksum="E9764B15516BC285117DFC27783CACAA375F05E08B3453AC7EB9AE6BE661667B" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\MobileHome.lsml" Checksum="6C5F039C028998AD7D83008F61D35C5B9DBEDC8A9659C168CEA3D401E1101A0B" />
+    <Document FullPath="C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\Screens\MobileSettings.lsml" Checksum="6139935A5CD4BDDD057DFBF515B30406D1A7A599B2031CEFFBFDBD9FBEC0D178" />
+  </Documents>
+</ModelDocumentManifest>

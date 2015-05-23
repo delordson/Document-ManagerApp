@@ -1,0 +1,6 @@
+C:\Users\Delordson\Documents\Visual Studio 2013\Projects\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\bin\Release\LSResourceGeneratorsTask.mcs
+C:\Users\Delordson\Documents\Visual Studio 2013\Projects\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs
+C:\Users\delordsonadmin\Documents\Visual Studio 2013\Projects\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\bin\Release\LSResourceGeneratorsTask.mcs
+C:\Users\delordsonadmin\Documents\Visual Studio 2013\Projects\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs
+C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\bin\Release\LSResourceGeneratorsTask.mcs
+C:\BitBucket\DocumentManagerApp\DocumentManagerApp\DocumentManagerApp.HTMLClient\bin\Release\LSClientCodeGeneratorsTask.mcs
